@@ -16,12 +16,5 @@ namespace NUnitTestProject1
         {
             _scenarioContext = scenarioContext;
         }
-
-        [Given(@"the first number is '(.*)' and total is '(.*)'")]
-        public void GivenTheFirstNumberIsAndTotalIs(int p0, int p1)
-        {
-            var total = p0 + 100;
-            Assert.AreEqual(p1, total);
-        }
     }
 }
