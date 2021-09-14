@@ -7,14 +7,14 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'test'
-      projects: '**/NUnitTestProject1.csproj'
+      projects: '**/SpecProj.csproj'
   
   - task: SpecFlowPlus@0
     inputs:
       generatorSource: 'TestAssembly'
-      testAssemblyFilePath: '../../../../*NUnitTestProject1.dll'
+      testAssemblyFilePath: '..\..\..\..\1\s\bin\Debug\netcoreapp3.1\SpecProj.dll'
       projectName: 'asd'
-      testExecutionJson: '**/TestExecution.json'
+      testExecutionJson: '..\..\..\..\1\s\bin\Debug\netcoreapp3.1\TestExecution.json'
     enabled: true
     continueOnError: true
     condition: always()
