@@ -12,8 +12,9 @@ steps:
   - task: SpecFlowPlus@0
     inputs:
       generatorSource: 'TestAssembly'
-      testAssemblyFilePath: 'NUnitTestProject1/bin/**/NUnitTestProject1.dll'
+      testAssemblyFilePath: '**/NUnitTestProject1.dll'
       projectName: 'asd'
-      testExecutionJson: 'NUnitTestProject1/**/TestExecution.json'
+      testExecutionJson: '**/TestExecution.json'
     continueOnError: true
     condition: always()
+    
